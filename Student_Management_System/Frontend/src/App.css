@@ -1,0 +1,133 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #222;
+  margin-bottom: 30px;
+}
+
+.form-container,
+.students-container {
+  background: white;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+input:disabled {
+  background: #eee;
+  cursor: not-allowed;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+form button {
+  grid-column: span 2;
+}
+
+.cancel-btn {
+  background: #64748b;
+}
+
+.message {
+  margin-top: 15px;
+  color: #2563eb;
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 14px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+th {
+  background: #2563eb;
+  color: white;
+}
+
+.edit-btn {
+  background: #16a34a;
+  margin: 3px;
+}
+
+.delete-btn {
+  background: #dc2626;
+  margin: 3px;
+}
+
+@media (max-width: 650px) {
+  form {
+    grid-template-columns: 1fr;
+  }
+
+  form button {
+    grid-column: span 1;
+  }
+
+  .students-container {
+    overflow-x: auto;
+  }
+
+  table {
+    min-width: 600px;
+  }
+}
